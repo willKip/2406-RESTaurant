@@ -1,0 +1,23 @@
+html
+    head
+        title= `Order ${orderData.orderID}`
+
+    body
+        include ../partials/header
+        h1= `Page of order ID ${orderData.orderID}`
+
+        h2= `Ordered By: ${orderData.username}`
+        h2= `Restaurant: ${orderData.restaurantName}`
+        h3= `Subtotal: $${orderData.subtotal}`
+        h3= `Tax: $${orderData.tax}`
+        h3= `Delivery Fee: $${orderData.deliveryFee}`
+        h3= `Total: $${orderData.total}`
+
+        h2 Items:
+        ul
+            if orderData.orderItems
+                each item in orderData.orderItems
+                    li
+                        p= `${item.name} - ${item.quantity}pcs`
+            else
+                p (none)

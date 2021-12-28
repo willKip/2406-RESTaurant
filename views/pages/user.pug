@@ -1,0 +1,25 @@
+html
+    head
+        title= `${userData.username}`
+
+    body(onload="init()")
+        include ../partials/header
+        h1= `Page of user '${userData.username}'`
+
+        if (username === userData.username)
+            h2 Make profile private?
+            form(id="privacy-form")
+
+            button(id="submit-button")
+
+        h2 Order History:
+        ul
+            if userData.orderIDs
+                each val in userData.orderIDs
+                    li
+                        a(href=`/orders/${val}`)= `${val}`
+            else
+                p (none)
+
+        script!= `const userData = ${JSON.stringify(userData)};`
+        script(src="/user.js")

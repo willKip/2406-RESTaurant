@@ -1,0 +1,16 @@
+html
+    head
+        title Register
+
+    body(onload="init()")
+        include ../partials/header
+        h1 Register a new user
+        div
+            | Username:
+            input(id="username-input" type="text" name="username" required="")
+            br
+            | Password:
+            input(id="password-input" type="password" name="password" required="")
+            br
+            button(id="submit-button") Register
+        script(src="/register.js")

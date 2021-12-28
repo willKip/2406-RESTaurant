@@ -1,0 +1,21 @@
+div#header
+	a(href="/") Home
+	| !{' '}
+	a(href="/users") Users
+	| !{' '}
+
+	if loggedin
+		a(href="/orderform") Order Form
+		| !{' '}
+		a(href="/profile") Profile
+		| !{' '}
+		a(href="/logout") Logout
+		| !{' '}
+		| !{` |  Logged in as ${username}`}
+	else
+		a(href="/register") Register
+		| !{' '}
+		a(href="/login") Login
+		| !{' '}
+	br
+	br

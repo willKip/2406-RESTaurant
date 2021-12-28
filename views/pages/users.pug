@@ -1,0 +1,14 @@
+html
+    head
+        title Users
+
+    body
+        include ../partials/header
+        if queryName
+            h1= `Users matching '${queryName}':`
+        else
+            h1= "Displaying all users:"
+        ul
+            for user in queryResult
+                li
+                    a(href=`/users/${user._id}`)= `${user.username}`
