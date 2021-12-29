@@ -17,6 +17,7 @@ const store = new MongoDBStore({
     uri: MONGODB_URI + "a4",
     collection: "sessions"
 });
+const port = process.env.port || 3000;
 
 // Set up session cookies to be stored in a4 DB
 app.use(require("express-session")({
@@ -106,8 +107,7 @@ MongoClient.connect(MONGODB_URI, (err, client) => {
     orderCollection = db.collection("orders");
 
     // Start server once Mongo is initialized
-    app.listen(3000);
-    console.log("Server listening on port 3000 at http://localhost:3000");
+    app.listen(port, () => console.log(`Server listening on port ${port} at http://localhost:${port}`));
 });
 
 /* Route handlers and helper functions */
