@@ -1,0 +1,22 @@
+version: '3'
+services:
+  2406a4:
+    container_name: 2406a4
+    image: willkip/2406a4:1.0
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: "mongo"
+    ports:
+      - '27017:27017'
+    volumes:
+      - db-data:/db
+    # silence mongo daemon logs
+    command: mongod --quiet --logpath /dev/null
+
+volumes:
+  db-data:

@@ -14,7 +14,7 @@ let mongo = require("mongodb");
 let MongoClient = mongo.MongoClient;
 let db;
 
-MongoClient.connect("mongodb://localhost:27017/", function (err, client) {
+MongoClient.connect("mongodb://mongo:27017/", function (err, client) {
     if (err) throw err;
 
     db = client.db("a4");

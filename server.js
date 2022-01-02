@@ -9,7 +9,7 @@ let MongoClient = mongo.MongoClient;
 let userCollection;
 let sessionCollection;
 let orderCollection;
-const MONGODB_URI = "mongodb://localhost:27017/";
+const MONGODB_URI = "mongodb://mongo:27017/";
 
 // Express app setup
 const app = express();

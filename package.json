@@ -1,11 +1,11 @@
 {
   "name": "a4",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Assignment 4 for F21 COMP2406.",
   "author": "William Lee 101181435",
   "scripts": {
     "initdb": "node ./database-initializer.js",
-    "start": "node ./server.js"
+    "start": "npm run initdb && node ./server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
