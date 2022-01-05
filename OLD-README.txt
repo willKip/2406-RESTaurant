@@ -1,7 +1,7 @@
 F21 COMP2406B Assignment 4
 
 Author
-    William Lee 101181435
+    William Lee
 Date
     Nov 23 2021
 
