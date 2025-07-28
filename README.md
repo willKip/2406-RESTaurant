@@ -65,6 +65,6 @@ explanation is provided in the [old README](OLD-README.txt) and the
 ## Credits
 
 The assignment specifications and base code are the property of the course
-instructor, [Dave McKenney](http://davemckenney.ca), the rest of the
-implementation coded by me. The assignment was permitted to be posted publicly;
+instructor, Ava McKenney. The rest of the
+implementation was coded by me. The assignment was permitted to be posted publicly;
 this repository has its purpose in education and documentation.
